@@ -1,36 +1,49 @@
-import corpcommentImg from '@/public/corpcomment.png';
-import rmtdevImg from '@/public/rmtdev.png';
-import wordanalyticsImg from '@/public/wordanalytics.png';
 
+import sololearningImg from "@/public/sololearning.svg";
+import grouplearningImg from "@/public/grouplearning.svg";
+import hospitalImg from "@/public/hospital.svg";
+import { group } from "console";
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { GrAidOption, GrCertificate } from "react-icons/gr";
+import { HiOutlineAcademicCap } from "react-icons/hi2";
+import analyticsImg from "@/public/corpcomment.png"
 
 export const links = [
     {
         name: "Home",
+        route: "/",
         hash: "#home",
+        xsClass: "contents",
     },
     {
         name: "About",
+        route: "about",
         hash: "#about",
+        xsClass: "contents",
     },
     {
         name: "Services",
+        route: "services",
         hash: "#services",
+        xsClass: "contents",
     },
     {
-        name: "Career",
-        hash: "#career",
+        name: "Careers",
+        route: "careers",
+        hash: "#careers",
+        xsClass: "hidden",
     },
     {
         name: "Our Community",
+        route: "community",
         hash: "#community",
+        xsClass: "hidden",
     },
     {
         name: "Contact Us",
+        route: "contact",
         hash: "#contact",
+        xsClass: "contents",
     },
 ] as const;
 
@@ -40,7 +53,7 @@ export const experiencesData = [
         location: "Miami, FL",
         description:
             "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-        icon: React.createElement(LuGraduationCap),
+        icon: React.createElement(GrCertificate),
         date: "2019",
     },
     {
@@ -48,7 +61,7 @@ export const experiencesData = [
         location: "Orlando, FL",
         description:
             "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-        icon: React.createElement(CgWorkAlt),
+        icon: React.createElement(HiOutlineAcademicCap),
         date: "2019 - 2021",
     },
     {
@@ -56,53 +69,64 @@ export const experiencesData = [
         location: "Houston, TX",
         description:
             "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-        icon: React.createElement(FaReact),
+        icon: React.createElement(GrAidOption),
         date: "2021 - present",
     },
 ] as const;
 
-export const projectsData = [
+export const CareersData = [
     {
-        title: "CorpComment",
+        title: "QCF Level 1 Certification",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-        imageUrl: corpcommentImg,
+            "This provided to all our Staff and it covers an introduction to the skills, qualities, and knowledge that are required for employment in the Health and Social Care Sector. It’s designed to give you a basic understanding of the sector and to help you provide service of the utmost quality.",
+        focus: [
+            "Health and Safety",
+            "Working with others",
+            "Equality, Diversity and Inclusion",
+            "Safeguarding",
+            "Duty of Care",
+        ],
+        imageUrl: sololearningImg,
+        imageDesc: "Learning Online",
     },
     {
-        title: "rmtDev",
+        title: "QCF Level 2 Certification",
         description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-        imageUrl: rmtdevImg,
+            "We also offer Level 2 Certification and it’s designed for individuals who are looking to move further into the care sector or are currently working mainly under supervision",
+        focus: [
+            "Person-Centered Care",
+            " Maintaining Individuals Independence",
+            "Improving Delivery of Care",
+        ],
+        imageUrl: grouplearningImg,
+        imageDesc: "Group Learning",
     },
     {
-        title: "Word Analytics",
+        title: "QCF Level 3 Certification",
         description:
-            "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-        tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-        imageUrl: wordanalyticsImg,
+            "We also offer Level 3 Certification which is a comprehensive program designed to equip individuals with the knowledge and skills needed for a fulfilling career in the health and social services sector.",
+        focus: [
+            "Practical Training",
+            "Care plans and Coordination services",
+            "Responsible information handling",
+        ],
+        imageUrl: hospitalImg,
+        imageDesc: "Learning by Shadowing",
     },
 ] as const;
 
-export const skillsData = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Git",
-    "Tailwind",
-    "Prisma",
-    "MongoDB",
-    "Redux",
-    "GraphQL",
-    "Apollo",
-    "Express",
-    "PostgreSQL",
-    "Python",
-    "Django",
-    "Framer Motion",
+export const galleryData = [
+    "https://nemahomecare.co.uk/home/wp-content/uploads/2020/11/IMG-0728.jpg",
+    "https://nemahomecare.co.uk/home/wp-content/uploads/2020/11/IMG-1023.jpg",
+    "https://nemahomecare.co.uk/home/wp-content/uploads/2020/11/IMG-0699.jpg",
+    "https://nemahomecare.co.uk/home/wp-content/uploads/2020/11/IMG-0436-1.jpg",
+    "https://nemahomecare.co.uk/home/wp-content/uploads/2020/11/IMG-0728.jpg",
 ] as const;
+// export const galleryData = [
+//     "officepic1",
+//     "officepic2",
+//     "officepic3",
+//     "officepic4",
+//     "officepic5",
+//     "officepic6",
+// ] as const;

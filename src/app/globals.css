@@ -4,5 +4,14 @@
 
 
 html {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
+}
+
+*::selection {
+  background-color: rgb(82 82 91);
+  color: #e9ffe7;
+}
+
+.borderBlack {
+  @apply border border-black/10;
 }
